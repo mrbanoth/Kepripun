@@ -1,0 +1,6 @@
+{
+  "name": "Kepripun",
+  "description": "Meet without a hitch. Low-latency browser video meetings, instant room links, encrypted team collaboration, and a global community hub.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

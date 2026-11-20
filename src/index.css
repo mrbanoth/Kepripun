@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-50: #F4F2FF;
+  --color-brand-100: #E6E2FF;
+  --color-brand-200: #CFC7FE;
+  --color-brand-500: #6A5BD6;
+  --color-brand-600: #6153CC;
+  --color-brand-700: #4F41B8;
+  --color-brand-800: #3E3296;
+
+  --color-tile-lavender: #D2B8F7;
+  --color-tile-peach: #FAD4B4;
+  --color-tile-sky: #A7D8F5;
+
+  --color-ink-900: #1F2128;
+  --color-ink-700: #3E414E;
+  --color-ink-500: #6F7382;
+  --color-ink-400: #9397A6;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes floatReaction {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.88);
+  }
+  18% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-64px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-96px) scale(0.95);
+  }
+}
+
+.animate-float-reaction {
+  animation: floatReaction 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
